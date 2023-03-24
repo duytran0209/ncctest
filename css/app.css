@@ -1,60 +1,143 @@
-html {
-  box-sizing: border-box;
+.hamburger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  float: right;
+  text-align: center;
+  z-index: 20;
 }
 
-* {
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #333;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.hamburger span:before,
+.hamburger span:after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  background-color: #191718;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar .menu {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+.sidebar .menu li {
+  border-bottom: 1px solid #ccc;
 }
 
-input,
-textarea,
-select,
-button {
-  outline: none;
-}
-
-input {
-  line-height: normal;
-}
-
-label,
-button {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
+.sidebar .menu li a {
   display: block;
-  max-width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: #aaaaaa;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
-body {
-  line-height: 1;
-  font-family: "Rubik", sans-serif;
-  color: #4f5665;
-  font-weight: 400;
-  background-color: white;
-}
-
-.wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
+.sidebar .menu li a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/*# sourceMappingURL=app.css.map */
+.logo {
+  width: 270px;
+  height: auto;
+}
+
+.banner {
+  background-color: #efefef;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0;
+  margin: 40px 0;
+  color: #0b0b0b;
+}
+
+.banner-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.banner-desc {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.logo-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.feature-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: center;
+  display: inline;
+  margin-right: 20px;
+  float: left;
+}
+hr {
+  margin-bottom: 40px;
+}
+
+.feature-list {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+  }
+  .sidebar {
+    width: 140px;
+    left: 0;
+  }
+
+  .sidebar .menu li a {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

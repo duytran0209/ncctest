@@ -11,150 +11,9 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="./css/app.css" /> -->
+    <link rel="stylesheet" href="./css/app.css" />
   </head>
-  <style>
-    .hamburger {
-      position: relative;
-      display: block;
-      cursor: pointer;
-      padding: 5px;
-      border: none;
-      background: transparent;
-      float: right;
-      text-align: center;
-      z-index: 20;
-    }
 
-    .hamburger span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin-bottom: 5px;
-      position: relative;
-      background: #333;
-      border-radius: 3px;
-      z-index: 10;
-    }
-
-    .hamburger span:before,
-    .hamburger span:after {
-      content: "";
-      position: absolute;
-      background: inherit;
-      border-radius: inherit;
-    }
-
-    .sidebar {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      right: 100%;
-      background-color: #191718;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .sidebar.active {
-      left: 0;
-    }
-
-    .sidebar .menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .sidebar .menu li {
-      border-bottom: 1px solid #ccc;
-    }
-
-    .sidebar .menu li a {
-      display: block;
-      padding: 10px;
-      font-size: 18px;
-      color: #aaaaaa;
-      text-decoration: none;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .sidebar .menu li a:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    @media (min-width: 1024px) {
-      .feature-item {
-        width: 100%;
-      }
-
-      .sidebar {
-        width: 140px;
-        left: 0;
-      }
-
-      .sidebar .menu li a {
-        font-size: 22px;
-        padding: 15px;
-      }
-
-      .hamburger {
-        display: none;
-      }
-    }
-    .container {
-      max-width: 1170px;
-      margin: 0 auto;
-      padding: 0 15px;
-      /* transform: translateX(70px); */
-    }
-
-    .logo {
-      width: 270px;
-      height: auto;
-    }
-    .banner {
-      background-color: #efefef;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 30px;
-      padding: 50px 0;
-      margin: 40px 0;
-      color: #0b0b0b;
-    }
-    .banner-title {
-      font-weight: 600;
-      font-size: 15px;
-    }
-    .banner-desc {
-      max-width: 600px;
-      text-align: center;
-      line-height: 1.4;
-    }
-    .logo-header {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .feature-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 20px;
-    }
-
-    .feature-content img {
-      width: 100px;
-      height: 100px;
-      object-fit: center;
-      display: inline;
-      margin-right: 20px;
-      float: left;
-    }
-    hr {
-      margin-bottom: 40px;
-    }
-  </style>
   <body>
     <button class="hamburger">
       <span></span>
@@ -245,7 +104,7 @@
     </div>
     <hr />
     <div class="container">
-      <span>Copyright @2021</span>
+      <p class="copy-right">Copyright @2021</p>
     </div>
     <script src="app.js"></script>
   </body>
